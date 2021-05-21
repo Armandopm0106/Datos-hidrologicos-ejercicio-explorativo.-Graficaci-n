@@ -1,2 +1,3 @@
-# Datos-hidrologicos-ejercicio-explorativo.-Graficaci-n
-Trabajo#2 GF0604
+## Ejercicio explorativo con datos hidrológicos
+
+inp <- read.csv("FDC.csv", na.strings="")
