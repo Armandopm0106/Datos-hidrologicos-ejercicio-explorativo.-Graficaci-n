@@ -9,7 +9,7 @@ Luego se utiliza la siguiente función para ver si aún hay casos incompletos:
 Para una graficación rapida del volumen de agua que recorre los caudales entre el tiempo, se utiliza la acción siguiente:
 >plot(inp[,2], type = "l",
      col="blue",
-     main = "Graficacion rapida, Tiempo entre caudal del rio Estrella y Banano",
+     main = "Volumen del caudal atravez del tiempo en los ríos Estrella y Banano",
      xlab = "Tiempo",
      ylab = "Volumen de agua",)
      
@@ -26,6 +26,7 @@ Si queremos visualizar los datos de manera separada utilizamos la función **his
 Lo siguiente que se realizará es cambiar los nombres de las colunmas para una mejor comprención y facilitar la escritura:
 >names(inp) <-  c("fecha", "Estrella", "Banano")  
 
+> plot(Estrella, main = "Graficación rápida del rio Estrella", xlab = "Tiempo") #_visualizacion basica del rio estrella_#
 
 >attach(inp)
 
@@ -49,7 +50,7 @@ Para crear una representación grafica de estos sobre del volumen de agua entre 
 En este apartado final, se observará la correlación que se presentan en las dos cuencas del río Banano y Estrella.
 > corinp <- cor(inp[,2:3], method = "spearman")  #_Para calcular el cooeficiente relación de las dos cuencas generando  una matrix. Se debe poner en la consola *corinp*._#  
 
->plot(Estrella, Banano) #_Generación grafico de correlación Estrella contra Banano_#  
+>plot(Estrella, Banano, main= "Correlación rio Estrella y Banano") #_Generación grafico de correlación Estrella contra Banano_#  
 
 Para finalizar, se hará un modelo de regresión lineal:
 > inp.lm <- lm(inp[,2] ~ inp[,3], data= inp  
