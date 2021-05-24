@@ -32,7 +32,7 @@ Lo siguiente que se realizará es cambiar los nombres de las colunmas para una m
 
 >attach(inp)
 
-![]()
+![](graficacionrapidarioestrella.png)
 ## Creación de **MAQ** y **MMQ** 
 
 Para la creacción de **MAQ** y **MMQ** se debe configurar el formato de las fechas esto con:
@@ -48,6 +48,7 @@ Para crear una representación grafica de estos sobre del volumen de agua entre 
 > plot(MAQ_Banano, ylim =c(100,3000) ) #_los puntos negros representan los maximos de cada año para el río Banano_#  
 > lines(MAQ_Estrella, col=2) #_La linea roja representa al rio Estrella_#
 
+![](graficosobrelosdatosMAQ.png)
 ## Analisis de correlación ##
 
 En este apartado final, se observará la correlación que se presentan en las dos cuencas del río Banano y Estrella.
@@ -59,3 +60,4 @@ Para finalizar, se hará un modelo de regresión lineal:
 > inp.lm <- lm(inp[,2] ~ inp[,3], data= inp  
 > summary(inp.lm) #_El resultado se presenta en la consola_#
 
+![](correlacionrioestrellaybanano.png)
