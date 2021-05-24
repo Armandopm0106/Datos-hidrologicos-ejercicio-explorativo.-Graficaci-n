@@ -13,6 +13,8 @@ Para una graficación rapida del volumen de agua que recorre los caudales entre 
      xlab = "Tiempo",
      ylab = "Volumen de agua",)
      
+![](Primera.png)
+
 >lines(inp[,3], col="green") 
 
 Si queremos ver una información comparativa entre los caudales de ambos ríos se utiliza la acción **summary** de modo que:
@@ -30,6 +32,7 @@ Lo siguiente que se realizará es cambiar los nombres de las colunmas para una m
 
 >attach(inp)
 
+![]()
 ## Creación de **MAQ** y **MMQ** 
 
 Para la creacción de **MAQ** y **MMQ** se debe configurar el formato de las fechas esto con:
